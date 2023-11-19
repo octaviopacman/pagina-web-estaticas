@@ -1,0 +1,108 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    text-rendering: optimizeLegibility;
+    text-shadow: 0px 0px 1px black;
+}
+
+/* Background */
+
+.background{
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+}
+
+.background>img{
+    
+    width: 100%;
+}
+
+/*---------------*/
+
+header {
+    backdrop-filter: blur(20px);
+    text-align: center;
+    padding: 10px;
+    mix-blend-mode: color-dodge;
+}
+
+.logo{
+    width: 200px;
+    
+}
+
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: black;
+}
+
+/*---------------------------------*/
+
+.titulo{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.descripcion{
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.imagen-nube{
+    width: 30%;
+}
+
+.descripcion > p{
+    width: 30%;
+    padding: 2px;
+    text-align: center;
+    
+}
+
+table{
+    width: 30%;
+    margin-top: 0;
+    border-radius: 10px;
+}
+
+th, td{
+    border: 1px solid gray;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+    backdrop-filter: blur(20px);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    
+}
+
+footer > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.administracion{
+    padding: 1%;
+}
