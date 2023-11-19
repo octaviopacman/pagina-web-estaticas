@@ -6,8 +6,7 @@ body {
     text-shadow: 0px 0px 1px black;
 }
 
-/* Background 
-ciche caniche😛*/
+/* Background */
 
 .background{
     z-index: -1;
@@ -81,4 +80,29 @@ th, td{
     text-align: center;
     border-radius: 10px;
     
+}
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+    backdrop-filter: blur(20px);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    
+}
+
+footer > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer-links{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.administracion{
+    padding: 1%;
 }
