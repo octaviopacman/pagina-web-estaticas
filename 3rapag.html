@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analizar Salarios</title>
+</head>
+<body>
+    <h2>Problema - Análisis de Salarios</h2>
+    <button onclick="analizarSalarios()">Comenzar Análisis de Salarios</button>
+    <p id="resultadoSalarios"></p>
+
+    <script>
+        function analizarSalarios() {
+            let sueldo, sumaTotal = 0, contadorSueldos = 0, sumaMenos200k = 0, contadorMenos200k = 0, sumaMas200k = 0, contadorMas200k = 0;
+
+            while (true) {
+                sueldo = parseFloat(prompt('Ingrese el sueldo del trabajador (0 para finalizar):', ''));
+                if (sueldo === 0) break;
+
+                sumaTotal += sueldo;
+                contadorSueldos++;
+
+                if (sueldo < 200000) {
+                    sumaMenos200k += sueldo;
+                    contadorMenos200k++;
+                } else {
+                    sumaMas200k += sueldo;
+                    contadorMas200k++;
+                }
+            }
+
+            let promedioTotal = contadorSueldos ? sumaTotal / contadorSueldos : 0;
+            let promedioMenos200k = contadorMenos200k ? sumaMenos200k / contadorMenos200k : 0;
+            let promedioMas200k = contadorMas200k ? sumaMas200k / contadorMas200k : 0;
+
+            let resultado = `Total de sueldos cargados: ${contadorSueldos}<br>` +
+                            `Promedio total de sueldos: ${promedioTotal.toFixed(2)}<br>` +
+                            `Cantidad de sueldos menores a $200,000: ${contadorMenos200k}<br>` +
+                            `Promedio de sueldos menores a $200,000: ${promedioMenos200k.toFixed(2)}<br>` +
+                            `Cantidad de sueldos mayores o iguales a $200,000: ${contadorMas200k}<br>` +
+                            `Promedio de sueldos mayores o iguales a $200,000: ${promedioMas200k.toFixed(2)}`;
+
+            document.getElementById('resultadoSalarios').innerHTML = resultado;
+        }
+    </script>
+</body>
+</html>
